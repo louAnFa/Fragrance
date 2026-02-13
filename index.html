@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Fragrance Decants</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">FRAGRANCE DECANTS</div>
+  <div class="cart-icon" onclick="toggleCart()">
+    Cart (<span id="cart-count">0</span>)
+  </div>
+</header>
+
+<!-- HOME VIEW -->
+<section id="homeView">
+
+  <section class="hero">
+    <h1>Luxury Fragrance Decants</h1>
+    <p>Premium 1ml–10ml samples of designer & niche fragrances selling at LMS</p>
+  </section>
+
+  <section class="products">
+
+    <div class="product" onclick="openProduct('JPG Le Beau Le Parfum',20,'jpgbeau.webp')">
+      <div class="product-card">
+        <img src="jpgbeau.webp">
+        <h3>JPG Le Beau Le Parfum</h3>
+        <p>$20 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('JPG Le Male Le Parfum',15,'jpgparfum.webp')">
+      <div class="product-card">
+        <img src="jpgparfum.webp">
+        <h3>JPG Le Male Le Parfum</h3>
+        <p>$15 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('JPG Le Male Elixir',17.5,'jpgelixir.webp')">
+      <div class="product-card">
+        <img src="jpgelxir.webp">
+        <h3>JPG Le Male Elixir</h3>
+        <p>$17.50 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('LV Afternoon Swim',35,'lvswim.webp')">
+      <div class="product-card">
+        <img src="lvswim.webp">
+        <h3>LV Afternoon Swim</h3>
+        <p>$35 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('LV Imagination',35,'lvimagination.webp')">
+      <div class="product-card">
+        <img src="lvimagination.webp">
+        <h3>LV Imagination</h3>
+        <p>$35 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('PDM Althair',25,'pdm.webp')">
+      <div class="product-card">
+        <img src="pdm.webp">
+        <h3>PDM Althair</h3>
+        <p>$25 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('Valentino Born in Roma',15,'valentino.webp')">
+      <div class="product-card">
+        <img src="valentino.webp">
+        <h3>Valentino Born in Roma</h3>
+        <p>$15 (10ml)</p>
+      </div>
+    </div>
+
+    <div class="product" onclick="openProduct('God of Fire',45,'godoffire.webp')">
+      <div class="product-card">
+        <img src="godoffire.webp">
+        <h3>God of Fire</h3>
+        <p>$45 (10ml)</p>
+      </div>
+    </div>
+
+  </section>
+
+</section>
+
+<!-- PRODUCT VIEW -->
+<section id="productView" class="hidden fade-in">
+  <button class="back-btn" onclick="goBack()">← Back</button>
+
+  <div class="product-page">
+    <div class="product-image">
+      <img id="productImage">
+    </div>
+
+    <div class="product-info">
+      <h1 id="productName"></h1>
+      <p id="productDescription"></p>
+
+      <label>Size:</label>
+      <select id="sizeSelector"></select>
+
+      <label>Quantity:</label>
+      <input type="number" id="quantity" value="1" min="1">
+
+      <h2>$<span id="productPrice"></span></h2>
+
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+</section>
+
+<!-- CART DRAWER -->
+<div class="cart-drawer" id="cartDrawer">
+  <h2>Your Cart</h2>
+  <div id="cart-items"></div>
+  <h3>Total: $<span id="cart-total">0.00</span></h3>
+  <button onclick="checkout()">Checkout</button>
+  <button onclick="toggleCart()" style="margin-top:10px;">Close</button>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p>Text 8542009452 your order and who you are. Work in progress.</p>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
